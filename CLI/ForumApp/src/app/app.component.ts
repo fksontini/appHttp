@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { sujet } from './models/sujet';
+import { message } from './models/message';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  sujets=[{
-    titre:"Forum Angular",
-  
-  },
-  {
-    titre:"Forum Communication Serveur"
-  },
-  {
-    titre:"Forum test Serveur"
-  },]
+  sujets=[
+    new sujet("Forum Angular",
+            [
+              new message("Jamel","Message de test 1"),
+              new message("Firas KSONTINI","Message de test 1")
+            ],
+
+)];
 }
