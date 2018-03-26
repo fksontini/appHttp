@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { sujet } from './models/sujet';
-import { message } from './models/message';
+import { Message } from './models/message';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,19 @@ export class AppComponent {
   sujets=[
     new sujet("Forum Angular",
             [
-              new message("Jamel","Message de test 1"),
-              new message("Firas KSONTINI","Message de test 1")
-            ],
-
-)];
-}
+              new Message("Jamel","Message de test 1"),
+              new Message("Firas KSONTINI","Message de test 1"),
+              new Message("Jamoula !","Message de test 3")
+            ]),
+            new sujet("Forum Angular",
+            [
+              new Message("Jamel","Message de test 1"),
+              new Message("Firas KSONTINI","Message de test 1"),
+              new Message("Jamoula !","Message de test 3")
+            ]
+            )];
+            supprimersujet(sujet){
+let index = this.sujets.indexOf(sujet);
+              this.sujets.splice(index,1);
+            }
+          }

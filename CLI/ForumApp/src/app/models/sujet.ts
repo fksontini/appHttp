@@ -1,7 +1,7 @@
-import { message } from "./message";
+import { Message } from "./message";
 
 export class sujet {
     constructor(public titre?:string,
-        public messages?:message[] ){};
+        public messages?:Message[] ){};
 
 }

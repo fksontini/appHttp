@@ -3,5 +3,6 @@
   <h1>
     Welcome to App Forum!
   </h1>
-  <app-sujet *ngFor="let s of sujets" [sujet]="s"></app-sujet> 
+  <app-sujet *ngFor="let s of sujets" 
+  [sujet]="s" (eventDelete)="supprimersujet(s)"></app-sujet> 
  </div>
